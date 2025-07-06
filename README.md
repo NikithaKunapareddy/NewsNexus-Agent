@@ -19,7 +19,7 @@ NewsNexus Agent is a Python-powered, full-stack news aggregation platform that u
 ```
 news rag/
 │
-├── main.py              # FastAPI backend entrypoint
+├── main.py              # FastAPI backend entry point
 ├── news_agent.py        # News agent logic & API integrations
 ├── utils.py             # Python utility functions
 ├── test_news_agent.py   # Python backend tests
@@ -27,7 +27,7 @@ news rag/
 ├── README.md            # Project documentation
 ├── docs.md              # Extended docs
 ├── frontend/            # React + TypeScript frontend (Vite)
-│   └── src/App.tsx      # Main React UI logic & styling
+│   └── src/App.tsx      # Main React UI logic & styling (TypeScript)
 └── ...                  # Other files
 ```
 
