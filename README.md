@@ -27,7 +27,8 @@ news rag/
 ├── README.md            # Project documentation
 ├── docs.md              # Extended docs
 ├── frontend/            # React + TypeScript frontend (Vite)
-│   └── src/App.tsx      # Main React UI logic & styling (TypeScript)
+│   └── src/
+│       └── App.tsx      # Main React UI logic & styling (TypeScript)
 └── ...                  # Other files
 ```
 
