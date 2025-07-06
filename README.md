@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# NewsNexus-Agent
-=======
 
 # NewsNexus Agent
 
@@ -13,7 +10,7 @@ NewsNexus Agent is a Python-powered, full-stack news aggregation platform that u
 ## 🚀 Features
 - 🔎 Query top news from NewsAPI, Serper, or Google Custom Search
 - 🔑 Effortless API key management via `.env`
-- 🎨 Modern, responsive UI (React with gradients, dark/light mode)
+- 🎨 Modern, responsive UI (React + TypeScript with gradients, dark/light mode)
 - 🐍 Python-centric: all backend logic, utilities, and tests in Python
 - 🧩 Easily extensible for new sources or features
 
@@ -29,8 +26,8 @@ news rag/
 ├── .env                 # API keys (not committed)
 ├── README.md            # Project documentation
 ├── docs.md              # Extended docs
-├── frontend/            # React frontend (Vite)
-│   └── src/App.jsx      # Main React UI logic & styling
+├── frontend/            # React + TypeScript frontend (Vite)
+│   └── src/App.tsx      # Main React UI logic & styling
 └── ...                  # Other files
 ```
 
@@ -70,7 +67,3 @@ Nikitha Kunapareddy
 GitHub: [@NikithaKunapareddy](https://github.com/NikithaKunapareddy)
 
 ---
-
-> Created with ❤️ by NikithaKunapareddy
-
->>>>>>> b89d526 (Done)
