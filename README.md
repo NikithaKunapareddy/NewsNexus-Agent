@@ -8,21 +8,28 @@ NewsNexus Agent is a Python-powered, full-stack news aggregation platform that u
 ---
 
 ## 🚀 Features
-- 📰 Real-time news aggregation from NewsAPI, Serper, or Google Custom Search
-- 🔥 Trending topics and breaking news detection
-- 🏷️ Category-based news search (politics, sports, tech, business, etc.)
-- 🌐 Multi-source comparison for unbiased news
-- 🕒 Fast, near real-time updates
-- 📝 Clean summaries and direct links to sources
-- 🔎 Powerful search for trending topics
+- 🔎 Query top news from NewsAPI, Serper, or Google Custom Search
 - 🔑 Effortless API key management via `.env`
 - 🎨 Modern, responsive UI (React + TypeScript with gradients, dark/light mode)
-- 🌓 Dark/light mode toggle
-- 📱 Mobile-friendly responsive design
 - 🐍 Python-centric: all backend logic, utilities, and tests in Python
 - 🧩 Easily extensible for new sources or features
-- 🛡️ CORS enabled for easy frontend-backend integration
-- 🧪 Built-in backend tests for reliability
+
+## ✨ What Makes NewsNexus Agent Extra Special?
+
+- 🧠 Smart news aggregation: Combines results from multiple APIs for broader coverage and less bias
+- 🏆 Trending & breaking news detection: Stay ahead with the most current stories
+- 🗂️ Category-based and location-based search: Find news by topic or region
+- 🌓 Seamless dark/light mode toggle: Comfortable reading day or night
+- 📱 Fully mobile responsive: Works great on any device
+- 🛡️ CORS enabled: Hassle-free frontend-backend integration
+- 🧪 Built-in backend tests: Ensures reliability and easy maintenance
+- 🛠️ Easy to extend: Add new news sources or features with minimal code changes
+- 💡 Clean summaries: Get the gist of each story at a glance
+- 🔗 Direct links: Go straight to the original news source
+- 🧰 Utilities: Helper functions for formatting, time, and more
+- 📝 Well-documented: Quickstart, usage, and customization guides included
+
+---
 
 ## 🗝️ API Keys Setup
 To use NewsNexus Agent, you need API keys for the news sources. Create a `.env` file in the root directory and add your keys:
@@ -34,8 +41,26 @@ SERPER_API_KEY=your_serper_key_here
 GOOGLE_SEARCH_API_KEY=your_google_api_key_here
 GOOGLE_CSE_ID=your_google_cse_id_here
 
-
 ---
+
+
+## 🗂️ Project Structure
+
+```
+news rag/
+│
+├── main.py              # FastAPI backend entry point
+├── news_agent.py        # News agent logic & API integrations
+├── utils.py             # Python utility functions
+├── test_news_agent.py   # Python backend tests
+├── .env                 # API keys (not committed)
+├── README.md            # Project documentation
+├── docs.md              # Extended docs
+├── frontend/            # React + TypeScript frontend (Vite)
+│   └── src/
+│       └── App.tsx      # Main React UI logic & styling (TypeScript)
+└── ...                  # Other files
+```
 
 ## 🧪 Usage Examples
 
@@ -70,24 +95,6 @@ Query: weather news delhi
 Source: Google
 ```
 
-🗂️ Project Structure
-
-news rag/
-│
-├── main.py              # FastAPI backend entry point
-├── news_agent.py        # News agent logic & API integrations
-├── utils.py             # Python utility functions
-├── test_news_agent.py   # Python backend tests
-├── .env                 # API keys (not committed)
-├── README.md            # Project documentation
-├── docs.md              # Extended docs
-├── frontend/            # React + TypeScript frontend (Vite)
-│   └── src/
-│       └── App.tsx      # Main React UI logic & styling (TypeScript)
-└── ...                  # Other files
-```
-
-
 ## 🖥️ Visual Output
 Below is a sample screenshot of the NewsNexus Agent UI (dark mode):
 
@@ -97,38 +104,27 @@ And in light mode:
 
 ![NewsNexus Agent UI - Light Mode](./screenshots/newsnexus-light.png)
 
-
-## ⚙️ Installation & Usage
-1. 📥 Clone the repo and add your API keys to `.env`
-2. 🚀 Start the backend:
-   ```bash
-   uvicorn main:app --reload
-   ```
-3. 🖥️ Start the frontend (in `frontend/`):
-   ```bash
-   npm install && npm run dev
-   ```
-4. 🧪 (Optional) Run backend tests:
-   ```bash
-   python test_news_agent.py
-   ```
-
+## 🛠️ Installation & Usage
+1. Clone the repo and add your API keys to `.env`
+2. Start the backend:  
+   `uvicorn main:app --reload`
+3. Start the frontend (in `frontend/`):  
+   `npm install && npm run dev`
+4. (Optional) Run backend tests:  
+   `python test_news_agent.py`
 
 ## 🧪 Utilities & Testing
 - `utils.py`: Helper functions for time, formatting, etc.
 - `test_news_agent.py`: Basic backend tests (unittest)
 
-
 ## 📚 Documentation
 - `README.md`: Quickstart & structure
 - `docs.md`: Extended usage, API, and customization
-
 
 ## 🙏 Acknowledgments
 - NewsAPI, Serper, and Google Custom Search for their APIs
 - FastAPI and React teams for their frameworks
 - All open-source contributors
-
 
 ## 👩‍💻 Author
 Nikitha Kunapareddy  
