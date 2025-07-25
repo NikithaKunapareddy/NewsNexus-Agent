@@ -41,7 +41,7 @@ const darkTheme: Theme = {
 const App: React.FC = () => {
   const [message, setMessage] = useState<string>('');
   const [source, setSource] = useState<string>('newsapi');
-  const [result, setResult] = useState<string>('');
+  const [result, setResult] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [dark, setDark] = useState<boolean>(false);
   const theme = dark ? darkTheme : lightTheme;
@@ -49,7 +49,7 @@ const App: React.FC = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setResult('');
+    setResult([]);
     try {
       const res = await fetch(API_URL, {
         method: 'POST',
@@ -57,9 +57,9 @@ const App: React.FC = () => {
         body: JSON.stringify({ message, source })
       });
       const data = await res.json();
-      setResult(data.response);
+      setResult(data);
     } catch (err) {
-      setResult('Error fetching news.');
+      setResult([]);
     }
     setLoading(false);
   };
@@ -99,20 +99,7 @@ const App: React.FC = () => {
               }}
               required
             />
-            <span style={{
-              position: 'absolute',
-              left: 22,
-              top: 10,
-              fontSize: 14,
-              color: '#ee0979',
-              opacity: message ? 1 : 0.5,
-              pointerEvents: 'none',
-              transition: 'opacity 0.2s',
-              fontWeight: 700,
-              zIndex: 3,
-            }}>
-              {message ? 'Query' : ''}
-            </span>
+            {/* Removed the pink 'Query' label */}
           </div>
           <div style={{ display: 'flex', gap: 12 }}>
             <select value={source} onChange={e => setSource(e.target.value)} style={{ flex: 1, padding: 15, fontSize: 18, borderRadius: 14, border: `2.5px solid ${theme.border}`, background: theme.input, color: theme.text, transition: 'background 0.3s, color 0.3s' }}>
@@ -125,13 +112,12 @@ const App: React.FC = () => {
             </button>
           </div>
         </form>
-        <pre style={{
+        <div style={{
           background: theme.result,
           padding: 26,
           minHeight: 180,
           maxHeight: 260,
           borderRadius: 14,
-          whiteSpace: 'pre-wrap',
           color: theme.text,
           fontSize: 18,
           width: '100%',
@@ -140,7 +126,24 @@ const App: React.FC = () => {
           overflowY: 'auto',
           overflowX: 'auto',
           wordBreak: 'break-word',
-        }}>{result}</pre>
+        }}>
+          {loading ? '' : (
+            Array.isArray(result) && result.length > 0 ? (
+              result.map((item, idx) => (
+                <div key={idx} style={{marginBottom: 18}}>
+                  <strong>{item.title}</strong>
+                  <div><a href={item.url} target="_blank" rel="noopener noreferrer">{item.url}</a></div>
+                  <div>{item.summary}</div>
+                  <hr />
+                </div>
+              ))
+            ) : (
+              <div style={{color: theme.text, fontSize: 18}}>
+                No results found.
+              </div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );
