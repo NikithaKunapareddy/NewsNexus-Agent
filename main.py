@@ -40,6 +40,4 @@ async def news_weather_agent(request: QuestionRequest):
     )
     end = time.time()
     print(f"Time taken for factual_response: {end - start} seconds")
-    return {
-        "response": response
-    }
+    return response

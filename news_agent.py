@@ -56,36 +56,48 @@ def factual_response(user_message: str, source: str = "newsapi", language: str =
     if source == "serper":
         results = serper_search(user_message)
         if not results:
-            return "No news found."
+            return []
         output = []
         for item in results[:3]:
             title = item.get("title", "")
             link = item.get("link", "")
             content = item.get("snippet", "")
-            output.append(f"{title}\n{link}\n{content}\n{'-'*40}")
-        return "\n".join(output)
+            output.append({
+                "title": title,
+                "url": link,
+                "summary": content
+            })
+        return output
     elif source == "google":
         results = google_search(user_message)
         if not results:
-            return "No news found."
+            return []
         output = []
         for item in results:
             title = item.get("title", "")
             link = item.get("link", "")
             content = item.get("snippet", "")
-            output.append(f"{title}\n{link}\n{content}\n{'-'*40}")
-        return "\n".join(output)
+            output.append({
+                "title": title,
+                "url": link,
+                "summary": content
+            })
+        return output
     else:
         results = newsapi_search(user_message)
         if not results:
-            return "No news found."
+            return []
         output = []
         for item in results:
             title = item.get("title", "")
             link = item.get("url", "")
             content = item.get("description", "")
-            output.append(f"{title}\n{link}\n{content}\n{'-'*40}")
-        return "\n".join(output)
+            output.append({
+                "title": title,
+                "url": link,
+                "summary": content
+            })
+        return output
 
 if __name__ == "__main__":
     print("Testing NewsAPI...")
