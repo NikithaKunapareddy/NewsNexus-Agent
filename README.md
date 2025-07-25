@@ -1,11 +1,8 @@
-
 # 📰 NewsNexus Agent
 
 **by NikithaKunapareddy**
 
 NewsNexus Agent is a Python-powered, full-stack news aggregation platform that unifies real-time news from multiple APIs into a single, beautiful interface. Built for speed, extensibility, and developer joy, it leverages FastAPI for the backend and a modern React frontend (with dark/light mode) for a seamless user experience.
-
----
 
 ## 🚀 Features
 - 🔎 Query top news from NewsAPI, Serper, or Google Custom Search
@@ -15,7 +12,6 @@ NewsNexus Agent is a Python-powered, full-stack news aggregation platform that u
 - 🧩 Easily extensible for new sources or features
 
 ## ✨ What Makes NewsNexus Agent Extra Special?
-
 - 🧠 Smart news aggregation: Combines results from multiple APIs for broader coverage and less bias
 - 🏆 Trending & breaking news detection: Stay ahead with the most current stories
 - 🗂️ Category-based and location-based search: Find news by topic or region
@@ -29,8 +25,6 @@ NewsNexus Agent is a Python-powered, full-stack news aggregation platform that u
 - 🧰 Utilities: Helper functions for formatting, time, and more
 - 📝 Well-documented: Quickstart, usage, and customization guides included
 
----
-
 ## 🗝️ API Keys Setup
 To use NewsNexus Agent, you need API keys for the news sources. Create a `.env` file in the root directory and add your keys:
 
@@ -40,13 +34,10 @@ NEWS_API_KEY=your_newsapi_key_here
 SERPER_API_KEY=your_serper_key_here
 GOOGLE_SEARCH_API_KEY=your_google_api_key_here
 GOOGLE_CSE_ID=your_google_cse_id_here
-
----
-
+```
 
 ## 🗂️ Project Structure
-
-```
+```bash
 news rag/
 │
 ├── main.py              # FastAPI backend entry point
@@ -64,15 +55,13 @@ news rag/
 
 ## 🧪 Usage Examples
 
-Here are some example queries you can try with NewsNexus Agent:
-
 ### Example 1: Get latest India news
-```
+```makefile
 Query: today india news
 Source: NewsAPI
 ```
 **Sample Output:**
-```
+```json
 [
   {
     "title": "India, UK sign historic free trade deal",
@@ -84,13 +73,13 @@ Source: NewsAPI
 ```
 
 ### Example 2: Search for technology news
-```
+```makefile
 Query: technology news
 Source: Serper
 ```
 
 ### Example 3: Ask about weather in Delhi (news-based)
-```
+```makefile
 Query: weather news delhi
 Source: Google
 ```
@@ -106,12 +95,18 @@ And in light mode:
 
 ## 🛠️ Installation & Usage
 1. Clone the repo and add your API keys to `.env`
-2. Start the backend:  
-   `uvicorn main:app --reload`
-3. Start the frontend (in `frontend/`):  
-   `npm install && npm run dev`
-4. (Optional) Run backend tests:  
-   `python test_news_agent.py`
+2. Start the backend:
+   ```bash
+   uvicorn main:app --reload
+   ```
+3. Start the frontend (in `frontend/`):
+   ```bash
+   npm install && npm run dev
+   ```
+4. (Optional) Run backend tests:
+   ```bash
+   python test_news_agent.py
+   ```
 
 ## 🧪 Utilities & Testing
 - `utils.py`: Helper functions for time, formatting, etc.
@@ -132,6 +127,4 @@ GitHub: [@NikithaKunapareddy](https://github.com/NikithaKunapareddy)
 
 ---
 
-<p align="center">
-  <b>⚡ Stay ahead with the latest news, delivered swiftly and seamlessly. Enjoy effortless access and stay informed anytime! 🗞️📲✨/b>
-</p>
+<p align="center"> <b>⚡ Stay ahead with the latest news, delivered swiftly and seamlessly. Enjoy effortless access and stay informed anytime! 🗞️📲✨</b> </p>
