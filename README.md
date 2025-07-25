@@ -36,6 +36,7 @@ GOOGLE_CSE_ID=your_google_cse_id_here
 
 ---
 
+
 ## � Examples
 
 Here are some example queries you can try with NewsNexus Agent:
@@ -69,7 +70,9 @@ Query: weather news delhi
 Source: Google
 ```
 
-```
+
+🗂️ Project Structure
+
 news rag/
 │
 ├── main.py              # FastAPI backend entry point
