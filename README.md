@@ -34,10 +34,10 @@ SERPER_API_KEY=your_serper_key_here
 GOOGLE_SEARCH_API_KEY=your_google_api_key_here
 GOOGLE_CSE_ID=your_google_cse_id_here
 
+
 ---
 
-
-## � Examples
+## 🧪 Usage Examples
 
 Here are some example queries you can try with NewsNexus Agent:
 
@@ -69,7 +69,6 @@ Source: Serper
 Query: weather news delhi
 Source: Google
 ```
-
 
 🗂️ Project Structure
 
